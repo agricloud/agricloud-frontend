@@ -4,6 +4,5 @@ Ext.define('Frontend.controller.Login', {
         'login.Form'
     ], 
     init: function() {
-        alert('Login');
     }
 });

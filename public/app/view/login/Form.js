@@ -8,8 +8,8 @@ Ext.define('Frontend.view.login.Form' ,{
     monitorValid: true,
     margins: '3 3 3 3',
     bodyStyle: {
-        padding: '10px',
-        background: 'transparent'
+        padding: '320px 0 0 150px',
+        background: '#fff url(images/loginform-bg.png) no-repeat'
     },
     items: [{
         fieldLabel: '帳號',
@@ -22,5 +22,8 @@ Ext.define('Frontend.view.login.Form' ,{
         name: 'password',
         inputType: 'password',
         allowBlank: false
+    }, {
+        xtype: 'button',
+        text: '登入'
     }]
 });
