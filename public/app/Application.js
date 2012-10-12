@@ -16,6 +16,12 @@ var __login_form_init_lambda = function(obj, eOpts) {
             form.submit({
                 success: function(form, action) {
                     console.log('ok');
+
+                    var mainVP = Ext.getCmp('mainVP');
+                    mainVP.removeAll();
+                    mainVP.add({
+                        xtype: 'dashboardpanel'
+                    });
                 },
                 failure: function(form, action) {
                     console.log('error');
@@ -29,10 +35,11 @@ Ext.application({
     name: 'Frontend',
     appFolder: 'app',
     controllers: [
-        'Login'
+        'Login', 'Dashboard'
     ],
     launch: function() {
         Ext.create('Ext.container.Viewport', {
+            id: 'mainVP',
             layout: 'fit',
             items: [
                 {
@@ -42,9 +49,10 @@ Ext.application({
                         afterrender: __login_form_init_lambda
                     }
                 }
+                /*{
+                    xtype: 'dashboardpanel'
+                }*/
             ]
-
-
         });
     }
 });
