@@ -24,6 +24,7 @@ Ext.define('Frontend.view.login.Form' ,{
         allowBlank: false
     }, {
         xtype: 'button',
-        text: '登入'
+        text: '登入',
+        itemId: 'loginBtn'
     }]
 });
