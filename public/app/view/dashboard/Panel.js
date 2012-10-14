@@ -5,19 +5,5 @@ Ext.define('Frontend.view.dashboard.Panel' ,{
     layout: 'border',
     frame: false,
     border: false,
-    bodyStyle: {
-    },
-    items: [{
-        id: 'menu',
-        title: '功能表',
-        region: 'west',
-        layout: 'border',
-        border: true,
-        /*split: true,*/
-        collapsible: true,
-        resizable: true,
-        width: 220,
-        minSize: 100,
-        maxSize: 360,
-    }]
+    bodyStyle: {}
 });

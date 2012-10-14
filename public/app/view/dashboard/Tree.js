@@ -1,0 +1,14 @@
+Ext.define('Frontend.view.dashboard.Tree' ,{
+    extend: 'Ext.tree.Panel',
+    alias : 'widget.dashboardtree',
+    title: '功能表',
+    region: 'west',
+    layout: 'border',
+    border: true,
+    /*split: true,*/
+    collapsible: true,
+    resizable: true,
+    width: 220,
+    minSize: 100,
+    maxSize: 360
+});

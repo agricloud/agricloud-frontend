@@ -6,30 +6,6 @@ Ext.Loader.setConfig({
     }
 });
 
-var __login_form_init_lambda = function(obj, eOpts) {
-    var btn = obj.getComponent('loginBtn');
-    btn.on('click', function(obj, e, eOpts) {
-        console.log('button clicked');
-
-        var form = this.up('form').getForm();
-        if (form.isValid()) {
-            form.submit({
-                success: function(form, action) {
-                    console.log('ok');
-
-                    var mainVP = Ext.getCmp('mainVP');
-                    mainVP.removeAll();
-                    mainVP.add({
-                        xtype: 'dashboardpanel'
-                    });
-                },
-                failure: function(form, action) {
-                    console.log('error');
-                }
-            });
-        }
-    });
-};
 
 Ext.application({
     name: 'Frontend',
@@ -56,3 +32,40 @@ Ext.application({
         });
     }
 });
+
+
+var __login_form_init_lambda = function(obj, eOpts) {
+    var btn = obj.getComponent('loginBtn');
+    btn.on('click', function(obj, e, eOpts) {
+        console.log('button clicked');
+
+        var form = this.up('form').getForm();
+        if (form.isValid()) {
+            form.submit({
+                success: function(form, action) {
+                    console.log('ok');
+
+                    var mainVP = Ext.getCmp('mainVP');
+                    mainVP.removeAll();
+
+                    var tree={
+                            xtype:'dashboardtree',
+                            store: 'TreeStore'
+                    };
+
+                    mainVP.add({
+                        xtype: 'dashboardpanel',
+                        items:[tree]
+                    });
+                    
+
+
+
+                },
+                failure: function(form, action) {
+                    console.log('error');
+                }
+            });
+        }
+    });
+};
