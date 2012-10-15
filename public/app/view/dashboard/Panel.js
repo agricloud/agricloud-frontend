@@ -8,6 +8,13 @@ Ext.define('Frontend.view.dashboard.Panel' ,{
     bodyStyle: {
     },
     items: [{
+        xtype: 'box',
+        region: 'north',
+        autoLoad: {
+            url: 'header.html',
+            scripts: false
+        }
+    }, {
         id: 'menu',
         title: '功能表',
         region: 'west',

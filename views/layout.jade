@@ -8,7 +8,13 @@ html
 			link(rel='stylesheet', href='http://cdn.sencha.io/ext-4.1.0-gpl/resources/css/ext-all-gray.css')
 			script(type='text/javascript', charset='utf-8', src='http://cdn.sencha.io/ext-4.1.0-gpl/ext-all.js')
 			script(type='text/javascript', charset='utf-8', src='http://cdn.sencha.io/ext-4.1.0-gpl/locale/ext-lang-zh_TW.js')
+
+			link(rel='stylesheet', href='./codemirror/lib/codemirror.css')
+			script(type='text/javascript', charset='utf-8', src='./codemirror/lib/codemirror.js')
+			script(type='text/javascript', charset='utf-8', src='./mzExt/src/Ext.ux.form.field.CodeMirror.411.js')			
+
 			script(type='text/javascript', charset='utf-8', src='./app/Application.js')
+			script(type='text/javascript', charset='utf-8', src='./app/Editor.js')
 			//if IE
 				script(type='text/javascript', src='https://getfirebug.com/firebug-lite.js')
 			script(type='text/javascript')
@@ -26,5 +32,12 @@ html
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				})();
+
+			link(href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono', rel='stylesheet', type='text/css')
+			style
+				.CodeMirror {
+					font-family: 'Droid Sans Mono', sans-serif;
+					font-size: 15px;
+				}
 	body
 		block content

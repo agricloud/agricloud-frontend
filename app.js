@@ -9,6 +9,29 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://guest:guest@alex.mongohq.com:10052/agricloud');
+
+var Schema = mongoose.Schema
+  , ObjectId = Schema.ObjectId;
+
+var ExtJsFile = new Schema({
+    path     : String
+  , content  : String
+});
+
+var ExtJsFile = mongoose.model('ExtJsFile', ExtJsFile);
+
+var file1 = new ExtJsFile();
+
+file1.path = "Application.js";
+file1.content = 'Hello World';
+
+file1.save(function(err) {
+  //do something
+});
+
 var app = express();
 
 app.configure(function(){
@@ -29,6 +52,20 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.post('/editor/readExtJsFile', function(req, res) {
+  ExtJsFile.find({path: 'Application.js'}, function (err, docs) {
+    if (docs.length > 0) {
+      res.send(docs[0].content);
+    }
+  });
+});
+
+app.get('/editor/listAll', function(req, res) {
+  ExtJsFile.find({}, function (err, docs) {
+    res.send(docs);
+  });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
