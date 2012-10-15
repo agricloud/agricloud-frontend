@@ -5,5 +5,11 @@ Ext.define('Frontend.view.dashboard.Panel' ,{
     layout: 'border',
     frame: false,
     border: false,
-    bodyStyle: {}
+    bodyStyle: {},
+    items:[
+        {
+            xtype:'dashboardtree',
+        }
+    ]
+
 });

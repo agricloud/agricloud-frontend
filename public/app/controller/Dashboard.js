@@ -8,10 +8,17 @@ Ext.define('Frontend.controller.Dashboard', {
     ],
 
     init: function() {
-    	// var Panel=this.getView('dashboard.Panel').create();
-    	// var Tree=this.getView('dashboard.Tree').create();
-    	// Panel.add(Tree);
-    	// console.log(Panel);
-    	// alert(1);
+
+
+        this.control({
+            'dashboardtree': {
+                itemclick: this.treeNodeClick
+            }
+        })
+    },
+
+    treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
+      console.log("treeNode click");
+      console.log(treeNode);
     }
 });

@@ -4,11 +4,13 @@ Ext.define('Frontend.view.dashboard.Tree' ,{
     title: '功能表',
     region: 'west',
     layout: 'border',
+    id:'menutree',
     border: true,
     /*split: true,*/
     collapsible: true,
     resizable: true,
     width: 220,
     minSize: 100,
-    maxSize: 360
+    maxSize: 360,
+    store:'TreeStore'
 });
