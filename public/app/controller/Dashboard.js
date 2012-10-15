@@ -28,7 +28,7 @@ Ext.define('Frontend.controller.Dashboard', {
         if(tab==null){
             this.createTab(tabpanel,record);
         }else {
-             this.ativeTab(tabpanel,tab);
+            this.ativeTab(tabpanel,tab);
         }
 
     },
@@ -41,6 +41,17 @@ Ext.define('Frontend.controller.Dashboard', {
             ,title:record.raw.text
             ,closable:true
         })
+    },
+    logout:function(){
+        console.log('logout');
+
+        var mainVP = Ext.getCmp('mainVP');
+        mainVP.removeAll();
+
+        mainVP.add({
+            xtype: 'loginform',
+            url: 'http://localhost:8080/agricloud/user/login.json'
+        });
     }
 });
 

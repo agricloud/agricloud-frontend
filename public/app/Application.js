@@ -22,9 +22,6 @@ Ext.application({
                     xtype: 'loginform',
                     url: 'http://localhost:8080/agricloud/user/login.json'
                 }
-                /*{
-                    xtype: 'dashboardpanel'
-                }*/
             ]
         });
     }
