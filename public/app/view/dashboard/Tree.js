@@ -3,7 +3,6 @@ Ext.define('Frontend.view.dashboard.Tree' ,{
     alias : 'widget.dashboardtree',
     title: '功能表',
     region: 'west',
-    layout: 'border',
     id:'menutree',
     border: true,
     /*split: true,*/

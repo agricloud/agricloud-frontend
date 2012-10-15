@@ -9,6 +9,9 @@ Ext.define('Frontend.view.dashboard.Panel' ,{
     items:[
         {
             xtype:'dashboardtree',
+        },
+        {
+            xtype:'dashboardtab',
         }
     ]
 
