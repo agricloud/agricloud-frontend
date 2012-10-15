@@ -8,8 +8,6 @@ Ext.define('Frontend.controller.Dashboard', {
     ],
 
     init: function() {
-
-
         this.control({
             'dashboardtree': {
                 itemclick: this.treeNodeClick
