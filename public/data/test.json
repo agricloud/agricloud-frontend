@@ -1,0 +1,23 @@
+{"text":".","children": [
+    {
+        text:'Suche',
+        leaf:true,
+        iconCls:'text'
+    },{
+        text:'Projekte',
+        iconCls:'text-folder',
+        children:[{
+            text:'Planung',
+            leaf:true,
+            iconCls:'text'
+        },{
+            text:'Pruefung',
+            leaf:true,
+            iconCls:'text'
+        }]
+     },{
+        text:'Abmelden',
+        leaf:true,
+        iconCls:'text'
+    }
+]}
