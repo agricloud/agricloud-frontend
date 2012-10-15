@@ -8,7 +8,7 @@ Ext.define('Frontend.controller.Dashboard', {
     ],
     refs: [
         {
-            ref: 'tabpanel',
+            ref: 'tabPanel',
             selector: 'dashboardtab'
         }
     ],
@@ -21,7 +21,7 @@ Ext.define('Frontend.controller.Dashboard', {
     },
 
     treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
-        var tabpanel=this.getTabpanel();
+        var tabpanel=this.getTabPanel();
         console.log(record.raw.id);
         var tab = tabpanel.getComponent(record.raw.id);
         console.log(tab);

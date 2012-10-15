@@ -9,7 +9,6 @@ Ext.define('Frontend.store.TreeStore' ,{
             root: 'children'
         }
     },
-    // 设置根节点
     root : {
         expanded: true,
         text: 'Root'
