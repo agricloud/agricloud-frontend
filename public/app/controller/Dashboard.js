@@ -1,17 +1,21 @@
 Ext.define('Frontend.controller.Dashboard', {
     extend: 'Ext.app.Controller',
     views: [
-        'dashboard.Panel','dashboard.Tree','dashboard.Tab'
+        'dashboard.Panel',
+        'dashboard.Tree',
+        'dashboard.Tab'
     ],
     stores: [
         'TreeStore'
     ],
+
     refs: [
         {
             ref: 'tabPanel',
             selector: 'dashboardtab'
         }
     ],
+
     init: function() {
         this.control({
             'dashboardtree': {
@@ -22,6 +26,7 @@ Ext.define('Frontend.controller.Dashboard', {
 
     treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
         var tabpanel=this.getTabPanel();
+
         console.log(record.raw.id);
         var tab = tabpanel.getComponent(record.raw.id);
         console.log(tab);
