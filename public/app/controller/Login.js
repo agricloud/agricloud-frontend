@@ -3,7 +3,6 @@ Ext.define('Frontend.controller.Login', {
     views: [
         'login.Form'
     ], 
-
     init: function() {
         this.control({
             'loginform button[itemId=loginBtn]': {
@@ -11,8 +10,8 @@ Ext.define('Frontend.controller.Login', {
             }
         })
     },
-    doLogin:function( btn, e, eOpts ) {
-    	var form = btn.up('form').getForm();
+    doLogin: function(btn, e, eOpts) {
+        var form = btn.up('form').getForm();
         if (form.isValid()) {
             form.submit({
                 success: this.dashboardRend,
@@ -21,14 +20,14 @@ Ext.define('Frontend.controller.Login', {
         }
     },
     dashboardRend:function(){
-    	console.log('ok');
+        console.log('ok');
 
-	    var mainVP = Ext.getCmp('mainVP');
-	    mainVP.removeAll();
+        var mainVP = Ext.getCmp('mainVP');
+        mainVP.removeAll();
 
-	    mainVP.add({
-	        xtype: 'dashboardpanel'
-	    });
+        mainVP.add({
+            xtype: 'dashboardpanel'
+        });
     },
     loginFail:function(form, action) {
         console.log('error');
