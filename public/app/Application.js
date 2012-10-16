@@ -9,7 +9,7 @@ Ext.application({
     name: 'Frontend',
     appFolder: 'app',
     controllers: [
-        'Login',
+        'USM001.Login',
         'Dashboard'
     ],
     launch: function() {

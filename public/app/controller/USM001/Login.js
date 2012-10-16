@@ -1,4 +1,4 @@
-Ext.define('Frontend.controller.Login', {
+Ext.define('Frontend.controller.USM001.Login', {
     extend: 'Ext.app.Controller',
     views: [
         'login.Form'
