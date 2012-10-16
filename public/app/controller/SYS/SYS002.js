@@ -1,14 +1,11 @@
 Ext.define('Frontend.controller.SYS.SYS002', {
     extend: 'Ext.app.Controller',
     views: [
-        'SYS.SYS002.Panel',
-        'SYS.SYS002.Tree',
-        'SYS.SYS002.Tab'
+        'SYS.SYS002.Panel'
     ],
     stores: [
         'SYS.SYS002.TreeStore'
     ],
-
     refs: [{
         ref: 'tabPanel',
         selector: 'sys002tab'
@@ -24,10 +21,9 @@ Ext.define('Frontend.controller.SYS.SYS002', {
 
     treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
         var tabpanel=this.getTabPanel();
-
-        Ext.log(record.raw.id);
+        console.log(tabpanel);
+        console.log(record.raw.id);
         var tab = tabpanel.getComponent(record.raw.id);
-        console.log(tab);
         if(tab==null){
             this.createTab(tabpanel,record);
         }else {
@@ -39,11 +35,17 @@ Ext.define('Frontend.controller.SYS.SYS002', {
         tabpanel.setActiveTab(tab);
     },
     createTab:function( tabpanel, record){
+
+        console.log("tab view xtype:"+record.raw.id.toLowerCase()+'panel');
         tabpanel.add({
-            id:record.raw.id
-            ,title:record.raw.text
-            ,closable:true
-        })
+            id:record.raw.id,
+            title:record.raw.text,
+            closable:true,
+            items:[{
+                xtype:record.raw.id.toLowerCase()+'panel'
+            }]
+        });
+        console.log("tab view xtype:"+record.raw.id.toLowerCase()+'panel');
     },
     logout:function(){
         Ext.log('logout');
