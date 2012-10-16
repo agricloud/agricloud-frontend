@@ -26,7 +26,7 @@ Ext.define('Frontend.controller.SYS.SYS001', {
         mainVP.removeAll();
 
         mainVP.add({
-            xtype: 'dashboardpanel'
+            xtype: 'SYS002panel'
         });
     },
     loginFail:function(form, action) {

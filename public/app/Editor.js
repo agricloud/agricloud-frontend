@@ -72,7 +72,7 @@ var __start_editor = function() {
 Ext.onReady(function () {
     var map = new Ext.util.KeyMap(document,{
             //key : "abc" //doesn't work (mybe a bug)
-            key: [69], // this works,
+            key: [69], // key 69 mean "e"
             ctrl: true,
             fn: __start_editor
         }
