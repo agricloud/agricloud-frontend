@@ -1,24 +1,22 @@
-Ext.define('Frontend.controller.Dashboard', {
+Ext.define('Frontend.controller.SYS.SYS002', {
     extend: 'Ext.app.Controller',
     views: [
-        'dashboard.Panel',
-        'dashboard.Tree',
-        'dashboard.Tab'
+        'SYS.SYS002.Panel',
+        'SYS.SYS002.Tree',
+        'SYS.SYS002.Tab'
     ],
     stores: [
-        'TreeStore'
+        'SYS.SYS002.TreeStore'
     ],
 
-    refs: [
-        {
-            ref: 'tabPanel',
-            selector: 'dashboardtab'
-        }
-    ],
+    refs: [{
+        ref: 'tabPanel',
+        selector: 'sys002tab'
+    }],
 
     init: function() {
         this.control({
-            'dashboardtree': {
+            'sys002tree': {
                 itemclick: this.treeNodeClick
             }
         })
@@ -27,7 +25,7 @@ Ext.define('Frontend.controller.Dashboard', {
     treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
         var tabpanel=this.getTabPanel();
 
-        console.log(record.raw.id);
+        Ext.log(record.raw.id);
         var tab = tabpanel.getComponent(record.raw.id);
         console.log(tab);
         if(tab==null){
@@ -37,10 +35,10 @@ Ext.define('Frontend.controller.Dashboard', {
         }
 
     },
-    ativeTab:function(tabpanel,tab){
+    ativeTab:function( tabpanel, tab){
         tabpanel.setActiveTab(tab);
     },
-    createTab:function(tabpanel,record){
+    createTab:function( tabpanel, record){
         tabpanel.add({
             id:record.raw.id
             ,title:record.raw.text
@@ -48,13 +46,13 @@ Ext.define('Frontend.controller.Dashboard', {
         })
     },
     logout:function(){
-        console.log('logout');
+        Ext.log('logout');
 
         var mainVP = Ext.getCmp('mainVP');
         mainVP.removeAll();
 
         mainVP.add({
-            xtype: 'loginform',
+            xtype: 'sys001loginform',
             url: 'http://localhost:8080/agricloud/user/login.json'
         });
     }

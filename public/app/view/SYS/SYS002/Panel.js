@@ -1,6 +1,6 @@
-Ext.define('Frontend.view.dashboard.Panel' ,{
+Ext.define('Frontend.view.SYS.SYS002.Panel' ,{
     extend: 'Ext.Panel',
-    alias : 'widget.dashboardpanel',
+    alias : 'widget.sys002panel',
     region: 'center',
     layout: 'border',
     frame: false,
@@ -15,8 +15,8 @@ Ext.define('Frontend.view.dashboard.Panel' ,{
             scripts: false
         }
     }, {
-        xtype:'dashboardtree',
+        xtype:'sys002tree',
     }, {
-        xtype:'dashboardtab',
+        xtype:'sys002tab',
     }]
 });

@@ -10,7 +10,7 @@ Ext.application({
     appFolder: 'app',
     controllers: [
         'SYS.SYS001',   //使用者登入
-        'Dashboard'
+        'SYS.SYS002'
     ],
     launch: function() {
         Ext.create('Ext.container.Viewport', {

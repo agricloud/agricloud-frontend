@@ -1,6 +1,6 @@
-Ext.define('Frontend.view.dashboard.Tree' ,{
+Ext.define('Frontend.view.SYS.SYS002.Tree' ,{
     extend: 'Ext.tree.Panel',
-    alias : 'widget.dashboardtree',
+    alias : 'widget.sys002tree',
     title: '功能表',
     region: 'west',
     id:'menutree',
@@ -11,5 +11,5 @@ Ext.define('Frontend.view.dashboard.Tree' ,{
     width: 220,
     minSize: 100,
     maxSize: 360,
-    store:'TreeStore'
+    store:'SYS.SYS002.TreeStore'
 });
