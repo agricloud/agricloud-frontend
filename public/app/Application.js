@@ -17,7 +17,7 @@ Ext.application({
             id: 'mainVP',
             layout: 'fit',
             items: [{
-                xtype: 'loginform',
+                xtype: 'sys001loginform',
                 url: 'http://localhost:8080/agricloud/user/login.json'
             }]
         });
