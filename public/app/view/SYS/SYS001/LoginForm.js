@@ -1,6 +1,6 @@
-Ext.define('Frontend.view.login.Form' ,{
+Ext.define('Frontend.view.SYS.SYS001.LoginForm' ,{
     extend: 'Ext.form.Panel',
-    alias : 'widget.loginform',
+    alias : 'widget.sys001loginform',
     region: 'center',
     frame: false,
     border: false,

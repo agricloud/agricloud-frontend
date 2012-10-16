@@ -1,7 +1,10 @@
+/**
+ * 使用者登入作業
+ */
 Ext.define('Frontend.controller.SYS.SYS001', {
     extend: 'Ext.app.Controller',
     views: [
-        'login.Form'
+        'SYS.SYS001.LoginForm'
     ], 
     init: function() {
         this.control({
@@ -19,7 +22,7 @@ Ext.define('Frontend.controller.SYS.SYS001', {
             });
         }
     },
-    dashboardRend:function(){
+    dashboardRend: function(){
         console.log('ok');
 
         var mainVP = Ext.getCmp('mainVP');
