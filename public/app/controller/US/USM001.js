@@ -5,58 +5,22 @@
 Ext.define('Frontend.controller.US.USM001', {
     extend: 'Ext.app.Controller',
     views: [
-        'dashboard.Panel',
-        'dashboard.Tree',
-        'dashboard.Tab'
-    ],
-    stores: [
-        'TreeStore'
-    ],
-    refs: [
-        {
-            ref: 'tabPanel',
-            selector: 'dashboardtab'
-        }
+        'US.USM001.MainPanel'
     ],
     init: function() {
-        this.control({
-            'dashboardtree': {
-                itemclick: this.treeNodeClick
-            }
-        })
+        console.log('USM001 Controller Init');
     },
-    treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
-        var tabpanel=this.getTabPanel();
-
-        console.log(record.raw.id);
-        var tab = tabpanel.getComponent(record.raw.id);
-        console.log(tab);
-        if(tab==null){
-            this.createTab(tabpanel,record);
-        }else {
-            this.ativeTab(tabpanel,tab);
-        }
-
-    },
-    ativeTab:function(tabpanel,tab){
-        tabpanel.setActiveTab(tab);
-    },
-    createTab:function(tabpanel,record){
-        tabpanel.add({
-            id:record.raw.id
-            ,title:record.raw.text
-            ,closable:true
-        })
-    },
-    logout:function(){
-        console.log('logout');
-
-        var mainVP = Ext.getCmp('mainVP');
-        mainVP.removeAll();
-
-        mainVP.add({
-            xtype: 'loginform',
-            url: 'http://localhost:8080/agricloud/user/login.json'
+    /**
+     * 選單執行此程式
+     */
+    execute: function(params) {
+        console.log('Execute USM001');
+        var tab = Ext.getCmp('mainTab');
+        tab.add({
+            id: params.id,
+            title: params.title,
+            closable: true,
+            items: {xtype: 'usm001mainpanel'}
         });
     }
 });

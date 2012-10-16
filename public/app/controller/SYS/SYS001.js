@@ -5,7 +5,7 @@ Ext.define('Frontend.controller.SYS.SYS001', {
     extend: 'Ext.app.Controller',
     views: [
         'SYS.SYS001.LoginForm'
-    ], 
+    ],
     init: function() {
         this.control({
             'sys001loginform button[itemId=loginButton]': {
@@ -20,23 +20,21 @@ Ext.define('Frontend.controller.SYS.SYS001', {
         var form = btn.up('form').getForm();
         if (form.isValid()) {
             form.submit({
-                success: this.dashboardRend,
-                failure: this.loginFail
+                success: this.loginSuccess,
+                failure: this.loginFailed
             });
         }
+        else {
+            Ext.Msg.alert('無法登入', '請檢查表單資料！');
+        }
     },
-    dashboardRend: function(){
-        console.log('ok');
-
+    loginSuccess: function() {
         var mainVP = Ext.getCmp('mainVP');
         mainVP.removeAll();
-
-        mainVP.add({
-            xtype: 'sys002panel'
-        });
+        mainVP.add({xtype: 'sys002panel'});
     },
-    loginFail:function(form, action) {
-        console.log('error');
+    loginFailed: function(form, action) {
+        Ext.Msg.alert('無法登入', '無法通過驗證！');
     }
 });
 

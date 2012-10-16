@@ -8,12 +8,10 @@ Ext.define('Frontend.controller.SYS.SYS002', {
     stores: [
         'SYS.SYS002.TreeStore'
     ],
-
     refs: [{
         ref: 'tabPanel',
         selector: 'sys002tab'
     }],
-
     init: function() {
         this.control({
             'sys002tree': {
@@ -21,29 +19,40 @@ Ext.define('Frontend.controller.SYS.SYS002', {
             }
         })
     },
+    treeNodeClick: function(treeNode, record, item, index, e, eOpts) {
+        /*
+        var tabpanel = this.getTabPanel();
+        console.log(tabpanel);
 
-    treeNodeClick:function( treeNode, record, item, index, e, eOpts ) {
-        var tabpanel=this.getTabPanel();
+        Ext.log('Click on: ' + record.raw.id);
 
-        Ext.log(record.raw.id);
         var tab = tabpanel.getComponent(record.raw.id);
-        console.log(tab);
-        if(tab==null){
-            this.createTab(tabpanel,record);
-        }else {
-            this.ativeTab(tabpanel,tab);
-        }
 
+        Ext.log(tab);
+
+        if (tab == null) {
+            this.createTab(tabpanel, record);
+        }
+        else {
+            this.ativeTab(tabpanel, tab);
+        }
+        */
+
+        //改用 Controller Specified Methods
+        console.log('Get Controller: ' + record.raw.id);
+        var controller = this.getController(record.raw.id);
+        //controller.init();
+        controller.execute({id: record.raw.id, title: record.raw.text});
     },
-    ativeTab:function( tabpanel, tab){
+    ativeTab: function(tabpanel, tab) {
         tabpanel.setActiveTab(tab);
     },
-    createTab:function( tabpanel, record){
+    createTab: function(tabpanel, record) {
         tabpanel.add({
-            id:record.raw.id
-            ,title:record.raw.text
-            ,closable:true
-        })
+            id: record.raw.id,
+            title: record.raw.text,
+            closable: true
+        });
     },
     logout:function(){
         Ext.log('logout');

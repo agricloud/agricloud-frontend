@@ -15,11 +15,13 @@ Ext.define('Frontend.view.SYS.SYS001.LoginForm' ,{
         fieldLabel: '帳號',
         labelWidth: 60,
         name: 'account',
+        value: 'admin',
         allowBlank: false
     }, {
         fieldLabel: '密碼',
         labelWidth: 60,
         name: 'password',
+        value: 'admin',
         inputType: 'password',
         allowBlank: false
     }, {
