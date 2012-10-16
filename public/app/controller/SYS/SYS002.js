@@ -1,9 +1,7 @@
 Ext.define('Frontend.controller.SYS.SYS002', {
     extend: 'Ext.app.Controller',
     views: [
-        'SYS.SYS002.Panel',
-        'SYS.SYS002.Tree',
-        'SYS.SYS002.Tab'
+        'SYS.SYS002.Panel'
     ],
     stores: [
         'SYS.SYS002.TreeStore'
