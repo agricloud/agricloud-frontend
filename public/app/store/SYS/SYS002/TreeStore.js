@@ -1,6 +1,6 @@
 Ext.define('Frontend.store.SYS.SYS002.TreeStore' ,{
     extend: 'Ext.data.TreeStore',
-    alias : 'widget.SYS002treestore',
+    alias : 'widget.sys002treestore',
     autoLoad: true,
     proxy: {
         type: 'ajax',

@@ -8,7 +8,7 @@ Ext.define('Frontend.controller.SYS.SYS001', {
     ], 
     init: function() {
         this.control({
-            'loginform button[itemId=loginBtn]': {
+            'sys001loginform button[itemId=loginBtn]': {
                 click: this.doLogin
             }
         })
@@ -29,7 +29,7 @@ Ext.define('Frontend.controller.SYS.SYS001', {
         mainVP.removeAll();
 
         mainVP.add({
-            xtype: 'SYS002panel'
+            xtype: 'sys002panel'
         });
     },
     loginFail:function(form, action) {

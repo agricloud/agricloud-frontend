@@ -1,6 +1,6 @@
 Ext.define('Frontend.view.SYS.SYS002.Tree' ,{
     extend: 'Ext.tree.Panel',
-    alias : 'widget.SYS002tree',
+    alias : 'widget.sys002tree',
     title: '功能表',
     region: 'west',
     id:'menutree',

@@ -11,12 +11,12 @@ Ext.define('Frontend.controller.SYS.SYS002', {
 
     refs: [{
         ref: 'tabPanel',
-        selector: 'SYS002tab'
+        selector: 'sys002tab'
     }],
 
     init: function() {
         this.control({
-            'SYS002tree': {
+            'sys002tree': {
                 itemclick: this.treeNodeClick
             }
         })
@@ -52,7 +52,7 @@ Ext.define('Frontend.controller.SYS.SYS002', {
         mainVP.removeAll();
 
         mainVP.add({
-            xtype: 'loginform',
+            xtype: 'sys001loginform',
             url: 'http://localhost:8080/agricloud/user/login.json'
         });
     }

@@ -1,6 +1,6 @@
 Ext.define('Frontend.view.SYS.SYS002.Tab' ,{
     extend: 'Ext.tab.Panel',
-    alias : 'widget.SYS002tab',
+    alias : 'widget.sys002tab',
     region: 'center',
     layout: 'border',
     border: false,
