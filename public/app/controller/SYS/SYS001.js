@@ -8,11 +8,14 @@ Ext.define('Frontend.controller.SYS.SYS001', {
     ], 
     init: function() {
         this.control({
-            'sys001loginform button[itemId=loginBtn]': {
+            'sys001loginform button[itemId=loginButton]': {
                 click: this.doLogin
             }
         })
     },
+    /**
+     * 登入驗證
+     */
     doLogin: function(btn, e, eOpts) {
         var form = btn.up('form').getForm();
         if (form.isValid()) {

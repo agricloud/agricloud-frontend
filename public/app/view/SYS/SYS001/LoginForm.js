@@ -25,6 +25,6 @@ Ext.define('Frontend.view.SYS.SYS001.LoginForm' ,{
     }, {
         xtype: 'button',
         text: '登入',
-        itemId: 'loginBtn'
+        itemId: 'loginButton'
     }]
 });
