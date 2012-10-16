@@ -20,6 +20,7 @@ Ext.define('Frontend.view.SYS.SYS002.Panel' ,{
         }
     }, {
         xtype:'sys002tree',
+        store:'SYS.SYS002.TreeStore'
     }, {
         xtype:'sys002tab',
     }]

@@ -10,6 +10,5 @@ Ext.define('Frontend.view.SYS.SYS002.Tree' ,{
     resizable: true,
     width: 220,
     minSize: 100,
-    maxSize: 360,
-    store:'SYS.SYS002.TreeStore'
+    maxSize: 360
 });
