@@ -8,7 +8,8 @@ Ext.define('Frontend.controller.MN.MNM001', {
     ], 
     init: function() {
 
-    },execute: function(params) {
+    }
+    ,execute: function(params) {
         console.log('Execute MNM001');
         var tab = Ext.getCmp('mainTab');
         tab.add({

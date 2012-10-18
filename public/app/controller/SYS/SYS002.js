@@ -18,39 +18,25 @@ Ext.define('Frontend.controller.SYS.SYS002', {
         })
     },
     treeNodeClick: function(treeNode, record, item, index, e, eOpts) {
-        /*
-        var tabpanel = this.getTabPanel();
-        console.log(tabpanel);
 
-        Ext.log('Click on: ' + record.raw.id);
+        var tabpanel = this.getTabPanel();
 
         var tab = tabpanel.getComponent(record.raw.id);
 
-        Ext.log(tab);
-
         if (tab == null) {
-            this.createTab(tabpanel, record);
+            var controller = this.getController(record.raw.id);
+            controller.execute({id: record.raw.id, title: record.raw.text});
         }
-        else {
-            this.ativeTab(tabpanel, tab);
-        }
-        */
+        
+        tab = tabpanel.getComponent(record.raw.id);
+        this.ativeTab({tabpanel:tabpanel,ativeTab:tab});
+        
 
         //改用 Controller Specified Methods
         console.log('Get Controller: ' + record.raw.id);
-        var controller = this.getController(record.raw.id);
-        //controller.init();
-        controller.execute({id: record.raw.id, title: record.raw.text});
     },
-    ativeTab: function(tabpanel, tab) {
-        tabpanel.setActiveTab(tab);
-    },
-    createTab: function(tabpanel, record) {
-        tabpanel.add({
-            id: record.raw.id,
-            title: record.raw.text,
-            closable: true
-        });
+    ativeTab: function(params) {
+        params.tabpanel.setActiveTab(params.ativeTab);
     },
     logout:function(){
         Ext.log('logout');

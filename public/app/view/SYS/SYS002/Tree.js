@@ -3,9 +3,7 @@ Ext.define('Frontend.view.SYS.SYS002.Tree' ,{
     alias : 'widget.sys002tree',
     title: '功能表',
     region: 'west',
-    id:'menutree',
     border: true,
-    /*split: true,*/
     collapsible: true,
     resizable: true,
     width: 220,

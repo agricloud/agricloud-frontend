@@ -4,7 +4,7 @@ Ext.define('Frontend.store.SYS.SYS002.TreeStore' ,{
     autoLoad: true,
     proxy: {
         type: 'ajax',
-        url: 'http://localhost:8080/agricloud/menu/tree.json',
+        url: 'http://localhost:8080/agricloud/menu/treeStore.json',
         reader: {
             type: 'json',
             root: 'children'

@@ -1,13 +1,6 @@
 Ext.define('Frontend.view.MN.MNM001.Panel' ,{
-    extend: 'Ext.Panel',
+    extend: 'Frontend.view.common.panel.standard',
     alias : 'widget.mnm001panel',
-    requires: [ 
-        'Frontend.view.common.toolbar.Standard'
-    ],
     frame: false,
-    border: false,
-    dockedItems: [{
-    	xtype:'commontoolbarstandard'
-    }]
-
+    border: false
 });
