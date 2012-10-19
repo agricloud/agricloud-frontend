@@ -12,6 +12,11 @@ Ext.define('Frontend.store.US.USM002.Store' ,{
         },
         writer: {
             type: 'json'
+        },
+        afterRequest:function(request,success){
+            if(request.method == 'PUT'){
+                 // your code
+            }
         }
     },
     listeners: {
