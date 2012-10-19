@@ -5,7 +5,7 @@ Ext.define('Frontend.store.US.USM002.Store' ,{
     autoLoad: true,
     proxy: {
         type: 'rest',
-        url: 'http://localhost:8080/agricloud/userGroup/rest',
+        url: 'http://localhost:8080/agricloud/rest/userGroup/',
         reader: {
             type: 'json',
             root: 'items'
