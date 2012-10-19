@@ -14,7 +14,6 @@ Ext.define('Frontend.view.US.USM002.Panel' ,{
             } 
         }
     ],
-    selType: 'rowmodel',
     plugins: [{
 	    	ptype:'rowediting'
 	}],

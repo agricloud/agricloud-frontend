@@ -14,7 +14,7 @@ Ext.define('Frontend.controller.US.USM002', {
     ],
     refs: [{
         ref: 'deleteButton',
-        selector: 'commonbuttondelete'
+        selector: 'usm002panel commonbuttondelete'
     },{
         ref: 'gridPanel',
         selector: 'usm002panel'
@@ -23,23 +23,18 @@ Ext.define('Frontend.controller.US.USM002', {
         this.control({
             'usm002panel commonbuttoncreate': {
                 click: this.doCreate
-            }
-        })
-        this.control({
+            },
             'usm002panel commonbuttondelete': {
                 click: this.doDelete
-            }
-        })
-        this.control({
+            },
             'usm002panel commonbuttonupdate': {
                 click: this.doUpdate
-            }
-        })
-        this.control({
+            },
             'usm002panel': {
                 selectionchange: this.ativeDeleteButton
             }
         })
+
 
 
         //store 可以不用使用refs 就取得實體並且可進行資料操作

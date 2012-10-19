@@ -1,11 +1,11 @@
-Ext.define('Frontend.store.US.USM002.Store' ,{
-    model:'Frontend.model.US.USM002.UserGroup',
+Ext.define('Frontend.store.MN.MNM001.Store' ,{
+    model:'Frontend.model.MN.MNM001.MenuGroup',
     extend: 'Ext.data.Store',
-    alias : 'widget.usm002store',
+    alias : 'widget.mnm001store',
     autoLoad: true,
     proxy: {
         type: 'rest',
-        url: 'http://localhost:8080/agricloud/rest/userGroup/',
+        url: 'http://localhost:8080/agricloud/rest/menuGroup/',
         reader: {
             type: 'json',
             root: 'items'
