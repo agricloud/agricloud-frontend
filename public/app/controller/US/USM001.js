@@ -20,6 +20,7 @@ Ext.define('Frontend.controller.US.USM001', {
             id: params.id,
             title: params.title,
             closable: true,
+            layout:'fit',
             items: {xtype: 'usm001mainpanel'}
         });
     }

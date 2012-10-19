@@ -16,6 +16,7 @@ Ext.define('Frontend.controller.MN.MNM001', {
             id: params.id,
             title: params.title,
             closable: true,
+            layout:'fit',
             items: {xtype: 'mnm001panel'}
         });
     }
