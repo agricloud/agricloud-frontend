@@ -2,26 +2,30 @@
 Ext.define('Frontend.view.MN.MNM001.Panel' ,{
     extend: 'Frontend.view.common.gridpanel.standard',
     alias : 'widget.mnm001panel',
+    requires:['Frontend.view.MN.MNM001.Combobox'],
     columns: [
-        { header: 'menuId',  dataIndex: 'menuId', flex: 1,
+        { 
+            header: 'menuId',  
+            dataIndex: 'menuId', 
+            flex: 1,
         	field: {
                 xtype: 'textfield'
             }
         },
-        { header: 'menuDes', dataIndex: 'menuDes',
-        	field: {
-                xtype: 'textfield'
-            } 
+        { 
+            header: 'menuDes', 
+            dataIndex: 'menuDes'
         },
-        { header: 'userGroupId', dataIndex: 'userGroupId',
+        { 
+            header: 'userGroupId', 
+            dataIndex: 'userGroupId',
         	field: {
-                xtype: 'textfield'
+                xtype: 'mnm001combobox'
             }
         },
-        { header: 'userGroupDes', dataIndex: 'userGroupDes',
-        	field: {
-                xtype: 'textfield'
-            } 
+        { 
+            header: 'userGroupDes', 
+            dataIndex: 'userGroupDes' 
         }
     ],
     plugins: [{

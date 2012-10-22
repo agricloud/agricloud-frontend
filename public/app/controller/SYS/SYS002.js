@@ -14,29 +14,30 @@ Ext.define('Frontend.controller.SYS.SYS002', {
         this.control({
             'sys002tree': {
                 itemclick: this.treeNodeClick
+            },'sys002panel': {
+                render: this.onPanelRendered
             }
         })
     },
+    onPanelRendered: function() {
+        this.tabpanel=this.getTabPanel();;
+    },
     treeNodeClick: function(treeNode, record, item, index, e, eOpts) {
 
-        var tabpanel = this.getTabPanel();
 
-        var tab = tabpanel.getComponent(record.raw.id);
+        var tab = this.tabpanel.getComponent(record.raw.id);
 
         if (tab == null) {
             var controller = this.getController(record.raw.id);
             controller.execute({id: record.raw.id, title: record.raw.text});
         }
         
-        tab = tabpanel.getComponent(record.raw.id);
-        this.ativeTab({tabpanel:tabpanel,ativeTab:tab});
+        tab = this.tabpanel.getComponent(record.raw.id);
+        this.tabpanel.setActiveTab(tab);
         
 
         //改用 Controller Specified Methods
         console.log('Get Controller: ' + record.raw.id);
-    },
-    ativeTab: function(params) {
-        params.tabpanel.setActiveTab(params.ativeTab);
     },
     logout:function(){
         Ext.log('logout');

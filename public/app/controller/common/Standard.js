@@ -25,9 +25,21 @@ Ext.define('Frontend.controller.common.Standard', {
         }
     },
     doUpdate: function() {
-        this.store.sync();
+        this.store.sync({
+            success : function(){
+                console.log("success");
+                Ext.Msg.alert('Status', '更新成功');
+            },
+            failure : function(response, options){
+                console.log("failure");
+                Ext.Msg.alert('Status', '更新失敗');
+            }  
+        });
     },
-    ativeDeleteButton:function(selModel, selections){
+    onGridSelection:function(selModel, selections,eOpts){
+        this.selections=selections;
+        this.selModel=selModel;
+
         //必須利用refs 取得實體介面已 render的物件
         this.deleteButton.setDisabled(selections.length === 0);
         //下列方式無法運作 雖然不會報錯

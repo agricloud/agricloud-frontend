@@ -31,7 +31,7 @@ Ext.define('Frontend.controller.US.USM002', {
                 click: this.doUpdate
             },
             'usm002panel': {
-                selectionchange: this.ativeDeleteButton,
+                selectionchange: this.onGridSelection,
                 render: this.onPanelRendered
             }
         })
