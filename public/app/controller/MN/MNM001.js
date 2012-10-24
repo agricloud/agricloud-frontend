@@ -36,6 +36,9 @@ Ext.define('Frontend.controller.MN.MNM001', {
             'mnm001panel commonbuttonupdate': {
                 click: this.doUpdate
             },
+            'mnm001panel commonbuttonread': {
+                click: this.doRead
+            },
             'mnm001combobox': {
                 select:this.comboboxSelect
             },
@@ -43,7 +46,7 @@ Ext.define('Frontend.controller.MN.MNM001', {
                 selectionchange: this.onGridSelection,
                 render: this.onPanelRendered
             }
-        })  
+        })
         //store 可以不用使用refs 就取得實體並且可進行資料操作
         this.store=this.getStore("MN.MNM001.Store");
         this.model=this.getModel("MN.MNM001.MenuGroup");

@@ -15,6 +15,10 @@ Ext.define('Frontend.controller.common.Standard', {
             }
         });
     },
+    doRead: function() {
+        console.log("doRead")
+        this.store.load();
+    },
     doCreate: function() {
         this.store.insert(0, this.model);
     },

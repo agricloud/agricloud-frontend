@@ -30,6 +30,9 @@ Ext.define('Frontend.controller.US.USM002', {
             'usm002panel commonbuttonupdate': {
                 click: this.doUpdate
             },
+            'usm002panel commonbuttonread': {
+                click: this.doRead
+            },
             'usm002panel': {
                 selectionchange: this.onGridSelection,
                 render: this.onPanelRendered
