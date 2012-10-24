@@ -14,9 +14,10 @@ Ext.define('Frontend.store.MN.MNM001.Store' ,{
             type: 'json'
         },
         afterRequest:function(request,success){
-            if(request.method == 'PUT'){
-                 // your code
-            }
+            var operation = request.operation;
+            var response = operation.response; 
+            if(success){
+            }else{}
         }
     },
     listeners: {
